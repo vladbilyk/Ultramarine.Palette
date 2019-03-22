@@ -5,3 +5,5 @@ Ultramarine.Palette.Extractor/obj/
 BulkImageProcessor/bin/
 BulkImageProcessor/obj/
 *.user
+SearchApi/venv/
+SearchApi/.vscode/
