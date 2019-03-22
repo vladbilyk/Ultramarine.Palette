@@ -1,3 +1,7 @@
 Ultramarine.Palette.Extractor/.vs/
 Ultramarine.Palette.Extractor/bin/
 Ultramarine.Palette.Extractor/obj/
+.vs/
+BulkImageProcessor/bin/
+BulkImageProcessor/obj/
+*.user
