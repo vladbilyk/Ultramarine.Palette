@@ -8,3 +8,5 @@ BulkImageProcessor/obj/
 SearchApi/venv/
 SearchApi/.vscode/
 SearchApi/data/
+SearchApi/.idea/
+SearchApi/__pycache__/
