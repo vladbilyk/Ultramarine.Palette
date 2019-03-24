@@ -37,19 +37,20 @@ with open("./data/tsvety-i-floristika.palette.json") as f:
     data = data + json.load(f)
 
 palettes = list(map(lambda r: r["Palette"], data))
+total_palettes = len(palettes)
 
 model.BatchEmbed(palettes)
 
 # Create an palette search index.
 palette_index = PaletteSearchIndex(model, palettes)
 
-print("{} palettes were processed".format(len(palettes)))
+print("{} palettes were processed".format(total_palettes))
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return render_template("index.html", url="http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr06/15/9/anigif_enhanced-buzz-25158-1381844793-0.gif");
+    return render_template("index.html", count=total_palettes, url="http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr06/15/9/anigif_enhanced-buzz-25158-1381844793-0.gif");
 
 # test_data = [
 #     {"id": "1", "imgUrl": "https://cs2.livemaster.ru/storage/ca/27/1286d2455b54c188e66afee5d1cz--ukrasheniya-dva-okeana-kulon-podveska-s-galkoj-i-morskim-stek.jpg"},
