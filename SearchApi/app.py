@@ -36,6 +36,9 @@ with open("./data/sumki-i-aksessuary.palette.json") as f:
 with open("./data/tsvety-i-floristika.palette.json") as f:
     data = data + json.load(f)
 
+with open("./data/aksessuary.palette.json") as f:
+    data = data + json.load(f)
+
 palettes = list(map(lambda r: r["Palette"], data))
 total_palettes = len(palettes)
 
