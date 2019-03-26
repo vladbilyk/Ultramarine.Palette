@@ -44,7 +44,7 @@ def hello():
 @app.route("/palettes/<string:palette>")
 def getPalettes(palette):
     palette_query = palette  # '141316-e6e7e8-617631-201f27-b4b79a'
-    num_neighbors = 40
+    num_neighbors = 120
 
     result = []
 
